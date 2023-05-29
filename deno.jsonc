@@ -2,6 +2,6 @@
   "tasks": {
     "start": "deno run -A mod.ts",
     "install": "deno install -A --unstable -rfn ng ./mod.ts",
-    "release": "deno run -A https://deno.land/x/ndeno@v1.2.0/release.ts"
+    "release": "deno run -A --unstable https://deno.land/x/ndeno@v1.2.0/release.ts"
   }
 }
