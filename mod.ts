@@ -26,8 +26,18 @@ if (import.meta.main) {
     },
   );
 
+  const release = new Command().alias("release").description(
+    "release new tag",
+  ).arguments("<tag:string>").action(async (_, tag) => {
+    await execa(['git', 'add', '.'])
+    await execa(['git', 'commit', '-m', "chore: update"])
+    await execa(['git', 'tag', tag])
+    await execa(['git', 'push', '--tags'])
+  });
+
   await commander
     .command("p", push)
+    .command("r", release)
     .command("c", commit)
     .parse(Deno.args);
 }
