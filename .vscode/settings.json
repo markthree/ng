@@ -1,5 +1,6 @@
 {
 	"deno.enable": true,
+	"deno.unstable": true,
 	"json.schemas": [
 		{
 			"url": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
