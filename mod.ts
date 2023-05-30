@@ -12,7 +12,7 @@ if (import.meta.main) {
       execa(["git", "add", "."]);
     });
 
-  const commit = new Command().alias("commit").description(
+  const commit = new Command().alias('m').alias("commit").description(
     "commit with message",
   )
     .arguments("<message:string>")
