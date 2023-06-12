@@ -2,6 +2,7 @@ import { execa } from "https://deno.land/x/ndeno@v1.2.0/src/process.ts";
 import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts";
 
 import { version } from "./src/version.ts";
+import { normalizeSSH } from "./src/normalize.ts";
 
 if (import.meta.main) {
   const commander = new Command()
@@ -37,7 +38,7 @@ if (import.meta.main) {
 
   const clone = new Command().alias("clone").description("clone remote repo")
     .arguments("<repo:string>").action(async (_, repo) => {
-      await execa(["git", "clone", repo]);
+      await execa(["git", "clone", normalizeSSH(repo)]);
     });
 
   await commander
