@@ -1,7 +1,7 @@
 {
   "tasks": {
     "start": "deno run -A mod.ts",
-    "release": "deno run -A --unstable https://deno.land/x/ndeno@v1.2.0/release.ts",
+    "release": "deno run --allow-read --allow-write --allow-env --allow-run https://deno.land/x/easy_std@v0.3.0/scripts/release.ts",
     "install": "deno install --allow-run --allow-read --allow-env --unstable -rfn g ./mod.ts"
   }
 }
