@@ -1,4 +1,4 @@
-import { execa } from "https://deno.land/x/ndeno@v1.2.0/src/process.ts";
+import { execa } from "https://deno.land/x/easy_std@v0.4.3/src/process.ts";
 import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts";
 
 import { version } from "./src/version.ts";
