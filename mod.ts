@@ -1,5 +1,5 @@
-import { execa } from "https://deno.land/x/easy_std@v0.4.3/src/process.ts";
-import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts";
+import { execa } from "https://deno.land/x/easy_std@v0.6.4/src/process.ts";
+import { Command } from "https://deno.land/x/cliffy@v1.0.0-rc.3/command/mod.ts";
 
 import { version } from "./src/version.ts";
 import { normalizeSSH } from "./src/normalize.ts";
