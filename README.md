@@ -7,7 +7,7 @@ simplify git operations
 ### install
 
 ```shell
-deno install -A --unstable -rfn g https://deno.land/x/m3g/mod.ts
+deno install --allow-run --allow-read --allow-env -rfn g https://deno.land/x/m3g/mod.ts
 ```
 
 ### cli
