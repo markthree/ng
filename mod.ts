@@ -1,4 +1,4 @@
-import { execa } from "https://deno.land/x/easy_std@v0.6.4/src/process.ts";
+import { execa } from "https://deno.land/x/easy_std@v0.8.0/src/process.ts";
 import { Command } from "https://deno.land/x/cliffy@v1.0.0-rc.3/command/mod.ts";
 
 import { version } from "./src/version.ts";
@@ -41,8 +41,16 @@ if (import.meta.main) {
       await execa(["git", "clone", normalizeSSH(repo)]);
     });
 
+  const amend = new Command().alias("amend").description("commit --amend")
+    .action(
+      async () => {
+        await execa(["git", "commit", "--amend"]);
+      },
+    );
+
   await commander
     .command("p", push)
+    .command("a", amend)
     .command("r", release)
     .command("l", clone)
     .command("c", commit)
